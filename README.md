@@ -16,10 +16,11 @@ In order to setup the repostiory please follow the steps given below.
 	`pip install -r requirements.txt`
 3. Once you've installed the requirements, you would need to download data that helps the NLTK library to do language processing tasks. To do this navigate to the folder `initializer_scripts` and run the following command,
 	`python download_nltk_corpora.py`
-4. Next we initalize some data in our vector database to begin working. Navigate to the `initializer_sripts` folder and run the following command,
+4. Change the path for storing your vectorstore information by changing the `DB_DIRECTORY` variable in `config.py`.
+5. Next we initalize some data in our vector database to begin working. Navigate to the `initializer_sripts` folder and run the following command,
 	`LIB_PATH=/path/to/your/local/nips-paper-semantic-search python populate_vectorstore.py`
 	*Please ensure to provide the* `LIB_PATH` *environment variable which contains the path to the repository you downloaded in order to run the script.*
-5. Now we can run the application server by running
+6. Now we can run the application server by running
 	`python app.py`
 
 # Exploring with `eda.ipynb`
