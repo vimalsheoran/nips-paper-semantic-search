@@ -3,6 +3,12 @@ This repository contains the code for the blog written [here](https://dev.to/vim
 
 **For a detailed information about the implementation visit the blog [here](https://dev.to/vimalsheoran/applied-semantic-search-search-for-research-papers-5nk?preview=a6b5318b02b5cdba0dcaf4b48c39a871ffe6b02c5d69327830859d26b31cfcb49ec794168846a11030fe987f5da2c5d4499a8dab53935ff28657ac25)**
 
+
+# Download Data
+To start working with the application you need to download the [NIPS Paper Dataset](https://www.kaggle.com/datasets/rowhitswami/nips-papers-1987-2019-updated). Once you've downloaded the dataset, you need to extract the zip into the `data/` folder inside this repository. Once you download and extract in the said folder, you should have two files
+`data/papers.csv` and `data/authors.csv`.
+
+
 # Setting Up
 In order to setup the repostiory please follow the steps given below.
 1. Setup and activate a virtual environment. Don't know how to setup a virtual environment? Follow the steps mentioned [here](https://docs.python.org/3/library/venv.html).
