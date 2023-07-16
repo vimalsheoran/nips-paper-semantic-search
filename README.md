@@ -31,25 +31,34 @@ There are 4 APIs in the application,
 ### Test Application Status
 
 This API tests to see if the application is running or not
+
 **Usage**:
+
 *Path*: `http://localhost:5000/test`
+
 *Method*: GET
+
 *Parameters*: None
-*Response*: ```json
+
+*Response*: ```
 {
 	'data': 'This app is working.', 
 	'status': 200
-}
-```
+}```
 
 ### Register New Paper Data
 
 Register data for a new paper in the vector store.
+
 **Usage**:
+
 *Path*: `http://localhost:5000/register`
+
 *Method*: POST
+
 *Request Type*: JSON
-*Request*: ```json
+
+*Request*: ```
 {
 	'id': 0,
     'title': "A sample paper title.",
@@ -57,29 +66,33 @@ Register data for a new paper in the vector store.
     'authors': ["Jon Doe", "Don Joe"],
     'institutions': ["Dunder and Mufflin", "Munder and Dufflin"],
     'publishing_year': 2023
-}
-```
-*Response*: ```json
+}```
+
+*Response*: ```
 {
 	'data': 'Successfully registered data.', 
 	'status': 200
-}
-```
+}```
 
 ### Query Database
 
 Query data present in the vector database. The user can select whether to run the query on the *title* of the paper or on the *abstract* of the paper. The application by default returns top 10 results based on the best match.
+
 **Usage**:
+
 *Path*: `http://localhost:5000/query`
+
 *Method*: POST
+
 *Request Type*: JSON
-*Request*: ```json
+
+*Request*: ```
 {
     'query_text': "Sample paper",
     'query_on': "title/abstract"
-}
-```
-*Response*: ```json
+}```
+
+*Response*: ```
 {
 	'data': [
 				{
@@ -112,27 +125,31 @@ Query data present in the vector database. The user can select whether to run th
            			'title': 'Ensemble Sampling'
            		}...
            ]
- }
-```
+ }```
+
 
 ### Delete from Database
 
 Deletion can be performed from the database by providing the IDs of the data items which are to be removed.
+
 **Usage**:
+
 *Path*: `http://localhost:5000/delete`
+
 *Method*: POST
+
 *Request Type*: JSON
-*Request*: ```json
+
+*Request*: ```
 {
 	'ids': ['0']
-}
-```
-*Response*: ```json
+}```
+
+*Response*: ```
 {
 	'deleted': True, 
 	'status': 200
-}
-```
+}```
 
 # Application Configurations
 The `config.py` files contains variables which control the configurations for the application and the database. You can alter these configurations to customize the application for yourself.
